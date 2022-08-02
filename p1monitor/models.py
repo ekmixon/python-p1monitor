@@ -47,9 +47,7 @@ class SmartMeter:
             Returns:
                 The energy tariff period class.
             """
-            if tariff == "P":
-                return EnergyTariff.HIGH
-            return EnergyTariff.LOW
+            return EnergyTariff.HIGH if tariff == "P" else EnergyTariff.LOW
 
         data = data[0]
         return SmartMeter(
